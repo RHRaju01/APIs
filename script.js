@@ -5,6 +5,12 @@ let nutrition;
 
 const getFruitData = async function (food) {
   try {
+    const message = document.getElementById("message");
+    message.textContent =
+      "Please wait. Getting nutrition value for your query...";
+    message.style.color = "#4162fe";
+    message.style.display = "block";
+
     // The API key used here for demonstration purposes
     // Don't use your API key in public interface
     const response = await fetch(
@@ -77,11 +83,22 @@ const getFruitData = async function (food) {
     }, 500);
   } catch (error) {
     console.error(error);
+    const message = document.getElementById("message");
+    message.textContent = "There was an error fetching data. Please try again.";
+    message.style.color = "#fe2400";
+    message.style.display = "block";
   }
 };
 
 function fetchData() {
-  const foodInput = document.getElementById("foodInput").value;
+  const foodInput = document.getElementById("foodInput").value.trim();
+  if (!foodInput) {
+    const message = document.getElementById("message");
+    message.textContent = "Please enter a valid food name.";
+    message.style.color = "#fe2400";
+    message.style.display = "block";
+    return;
+  }
   getFruitData(foodInput);
   document.getElementById("foodInput").value = "";
   document.getElementById("foodInput").blur();

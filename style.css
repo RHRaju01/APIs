@@ -36,7 +36,16 @@ body {
 #message {
   margin-top: 20px;
   font-size: 18px;
-  color: #333;
+  display: block;
+  text-align: center;
+}
+
+#message.red {
+  color: #fe2400;
+}
+
+#message.blue {
+  color: #4162fe;
 }
 
 .data-table-container {
