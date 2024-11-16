@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Nutrition Data</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="input-container">
+      <input type="text" id="foodInput" placeholder="Enter food name" />
+      <button id="getDataButton">Get Nutrition Data</button>
+    </div>
+
+    <div id="message">Enter food name to see its nutrition value</div>
+
+    <div class="data-table-container">
+      <div class="nutrition-header">
+        <h1>Nutrition Data</h1>
+        <h2 id="nutritionDetails"></h2>
+      </div>
+      <table id="tab">
+        <thead>
+          <tr>
+            <th>Nutrient</th>
+            <th>Amount</th>
+            <th>Unit</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </body>
+</html>

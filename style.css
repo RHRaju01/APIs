@@ -1,0 +1,99 @@
+body {
+  font-family: Agenda-Light, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.input-container input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-container button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.input-container button:hover {
+  background-color: #454141;
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+.data-table-container {
+  margin-top: 20px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.nutrition-header {
+  text-align: center;
+}
+
+.nutrition-header h1 {
+  font-size: 2rem;
+  color: #444;
+}
+
+.nutrition-header h2 {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table#tab {
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-weight: 100;
+  background: #333;
+  color: #fff;
+  text-rendering: optimizeLegibility;
+  border-radius: 5px;
+}
+
+table#tab thead th {
+  font-weight: 600;
+}
+
+table#tab thead th,
+table#tab tbody td {
+  padding: 0.8rem;
+  font-size: 1.4rem;
+}
+
+table#tab tbody td {
+  padding: 0.8rem;
+  font-size: 1.4rem;
+  color: #444;
+  background: #eee;
+}
+
+table#tab tbody tr:not(:last-child) {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
