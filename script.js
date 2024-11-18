@@ -23,7 +23,7 @@ const getFruitData = async function (food) {
     }
 
     data = await response.json();
-    console.log(data);
+    // console.log(data);
     const capitalizeFoodStr = function (string) {
       if (!string) return string;
       capStr = string.charAt(0).toUpperCase() + string.slice(1);
